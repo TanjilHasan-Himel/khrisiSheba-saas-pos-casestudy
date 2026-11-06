@@ -13,6 +13,40 @@ The platform is designed strictly against the Department of Agricultural Extensi
 >
 > 🔒 **Proprietary Commercial Code**: The core web client, Fastify transaction microservices, and internal database migrations are maintained in a secure private repository under proprietary commercial copyright (© 2026 Tanjil Hasan Himel). This public repository serves as an open architecture audit and technical showcase.
 
+---
+
+## 🏛️ Executive 4-Pillar Architecture Navigator
+
+Directly explore the complete product, business, engineering, and decision audit records:
+
+| Pillar | Focus & Core Deliverables | Direct Deep Links |
+| :--- | :--- | :--- |
+| 📊 **01. Business Analysis (BA)** | Statutory acts (DAE, BADC), seasonal credit cycles (খাতা), and canonical Requirements Traceability Matrix. | [**📁 01-business-analysis/**](./01-business-analysis/)<br>• [Requirements Traceability Matrix (RTM)](./01-business-analysis/requirements-traceability-matrix.md)<br>• [Business Requirements Document (BRD)](./01-business-analysis/business-requirements.md)<br>• [Problem & Context](./01-business-analysis/problem-and-context.md) |
+| 🎯 **02. Product Management (PM)** | Product Requirements Document (PRD), User Personas (Dealer & Farmer), User Stories, and Multi-Quarter Roadmap. | [**📁 02-product-management/**](./02-product-management/)<br>• [Product Requirements (PRD)](./02-product-management/prd.md)<br>• [Product Roadmap](./02-product-management/roadmap.md)<br>• [Product Decisions](./02-product-management/product-decisions.md) |
+| 🏗️ **03. Software Engineering (SWE)** | Modular Monolith TRD, C4 Topology, PostgreSQL 17 ERD (21 tables, RLS), API Design, and QA Test Suite (304 tests). | [**📁 03-software-engineering/**](./03-software-engineering/)<br>• [System Architecture (TRD)](./03-software-engineering/architecture.md)<br>• [Database Schema (ERD)](./03-software-engineering/database-schema.md)<br>• [Testing & Limitations (QA)](./03-software-engineering/testing-and-limitations.md) |
+| 🧠 **04. Decisions & Research (ADR)** | Architecture Decision Records (ADRs), DAE Regulatory Acts Research, Trade-off Matrix, and Lessons Learned. | [**📁 04-research-and-decisions/**](./04-research-and-decisions/)<br>• [Architecture Decision Records (ADRs)](./04-research-and-decisions/trade-offs.md)<br>• [Regulatory Research](./04-research-and-decisions/research-notes.md)<br>• [Lessons Learned & Post-Mortem](./04-research-and-decisions/lessons-learned.md) |
+| 🛡️ **05. Publish-Readiness Review** | 10-Rule Compliance Audit, Zero Secret Leakage Sign-Off, and Human Approval Ledger. | [**📄 Publish-Readiness Audit Report**](./publish-review.md)<br>[**📄 Complete Consolidated Case Study**](./case-study.md) |
+
+---
+
+## 🎯 Master Requirements Traceability Matrix (RTM Executive View)
+
+Connecting **10 statutory business problems** to **product capabilities**, **technical modules**, and **verified automated test evidence** (100% pass rate across 304 Vitest tests):
+
+| Business Problem | Statutory Requirement | Implemented Feature | Verified Test Evidence | Status |
+| :--- | :--- | :--- | :--- | :---: |
+| **P-01: Regulatory Price Gouging Fines**<br>Dealers face mobile court fines for exceeding fertilizer prices. | **BR-01: Gazetted MRP Enforcement**<br>Enforce government price ceilings across subsidized fertilizers. | **POS Quota & Price Guard**<br>Checkout rejecting cart items exceeding MRP. | `apps/api/src/modules/fertilizer/`<br>Zod validator schema & Fastify hook (8 tests) | `[VERIFIED]` |
+| **P-02: Acute Pesticide Poisoning & Liability**<br>Dispensing toxic agrochemicals without warnings. | **BR-02: WHO Hazard & PHI Communication**<br>Mandate toxicity banding, PHI days, and antidotes. | **Toxicity Invoice Advisory**<br>Color-coded hazard badges (Red/Yellow) on printed memos. | `apps/api/src/modules/pesticides/`<br>WHO hazard classification engine (6 tests) | `[VERIFIED]` |
+| **P-03: Crop Failure from Dead Seed Lots**<br>Selling expired seeds destroys crop yields and trust. | **BR-03: SCA Germination Verification**<br>Reject seed lots with germination rates below 80%. | **Certified Seed Gatekeeper**<br>Automatic block on expired or sub-standard seed batches. | `apps/api/src/modules/seeds/`<br>SCA viability check middleware (5 tests) | `[VERIFIED]` |
+| **P-04: Seasonal Credit Defaults (বাকি খাতা)**<br>Calendar-month ledgers misalign with 4-month crop cycles. | **BR-04: Biological Crop Credit Cohorts**<br>Track debts by Boro, Aman, Aus, and Rabi harvest cycles. | **Farmer Seasonal Khata Book**<br>Crop installment schedules + 1-click Bengali SMS alerts. | `apps/saas/src/components/CustomerKhataModule.tsx`<br>+ Fastify Khata routes (7 tests) | `[VERIFIED]` |
+| **P-05: Inbound Procurement Shortages**<br>Suppliers deliver partial shipments without formal records. | **BR-05: Goods Received Note (GRN)**<br>Track ordered vs received quantities with dispute logs. | **A4 Procurement Print Engine**<br>Printable PO & GRN with DAE license numbers and dual signatures. | `apps/saas/src/components/SuppliersModule.tsx`<br>+ High-contrast `@media print` CSS (27 tests) | `[VERIFIED]` |
+| **P-06: Cashier Thefts & Drawer Discrepancies**<br>Discrepancies between cash collected and physical cash. | **BR-06: Daily Cash Drawer Balancing**<br>Audit physical cash denominations against system sales total. | **Cash Drawer Balancing & Z-Reports**<br>Denomination counter, variance logging, and closing reports. | `apps/api/src/modules/operations/`<br>Double-entry cash register reconciliation (49 tests) | `[VERIFIED]` |
+| **P-07: Cross-Tenant Data Leakage**<br>Rival stores operating on same platform seeing competitor data. | **BR-07: Engine-Level Data Isolation**<br>Guarantee zero-trust multi-tenancy at database engine level. | **PostgreSQL 17 RLS Policies**<br>Row-level security bound to authenticated JWT `tenant_id`. | `supabase/migrations/core_tenancy_and_pos.sql`<br>JWT tenant claim constraints | `[VERIFIED]` |
+| **P-08: Visual Numerical Jitter on Telemetry**<br>Rapid balance updates causing jarring visual flicker. | **BR-08: Physically Grounded Telemetry**<br>Render continuous, smooth balance transitions without flicker. | **Harmonic Spring Oscillator**<br>Critically damped spring (`useSpring`) & Catmull-Rom spline curves. | `apps/saas/src/hooks/useSpring.ts`<br>+ `catmullRom.ts` spline engine (51 tests) | `[VERIFIED]` |
+| **P-09: Liquid Pull-to-Refresh Gesture**<br>Artificial animations feeling disconnected from physical pull. | **BR-09: Mathematical Volume Preservation**<br>Maintain constant 2D area during liquid elastic stretching. | **Volume-Preserving Pull Hook**<br>`scaleY * scaleX^2 = 1.0` liquid pull with Web Audio synthesis. | `apps/saas/src/hooks/useGooScale.ts`<br>Mathematical volume invariant (11 tests) | `[VERIFIED]` |
+| **P-10: Peak-Hours Checkout Race Conditions**<br>Simultaneous counter checkouts causing stock race conditions. | **BR-10: Atomic Ledger Reconciliations**<br>Ensure zero race conditions during peak morning sales rush. | **Idempotent Stock Decrements**<br>Database row locks & atomic transaction boundaries. | `apps/api/src/modules/operations/stress-challenge.test.ts`<br>Atomic transaction managers (73 tests) | `[VERIFIED]` |
+
+---
 
 ## Table of Contents
 1. [Engineering Case Study](#1-engineering-case-study)
