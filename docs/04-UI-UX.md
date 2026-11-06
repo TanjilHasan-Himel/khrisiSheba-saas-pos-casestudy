@@ -1,5 +1,7 @@
 # 04 — UI/UX Brief
 
+> **Comprehensive Research Paper**: See the complete empirical architecture & UX research paper at [UI-UX-RESEARCH-PAPER.md](./UI-UX-RESEARCH-PAPER.md) benchmarked against Square POS, Shopify POS Pro, Toast POS, Khatabook, and DeHaat.
+
 ## 1. Product personality
 
 Trustworthy, fast, calm, practical, agricultural but not rustic cliché. No random gradients, stock farming hero overload, fake analytics, floating glass cards or excessive icons. Data accuracy and legibility take precedence.
