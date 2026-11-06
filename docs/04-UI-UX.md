@@ -36,6 +36,32 @@ Trustworthy, fast, calm, practical, agricultural but not rustic cliché. No rand
 | Staff          | invites, roles, store access                     | revoked permission     |
 | Settings       | tenant/store profile, units, policy              | unsaved changes        |
 
+### Production Visual Inventory
+
+1. **Dashboard & Cash-Flow Telemetry:**
+   ![Dashboard Overview](./assets/screenshots/01-dashboard.png)
+
+2. **Point of Sale & Regulatory Guardrails:**
+   ![POS & Cash Memo](./assets/screenshots/02-pos-billing.png)
+
+3. **Product Inventory, Subsidies & Toxicity Profiles:**
+   ![Inventory Stock](./assets/screenshots/03-inventory-stock.png)
+
+4. **Farmer Khata Book & Seasonal Credit Cycles:**
+   ![Farmer Khata](./assets/screenshots/04-farmer-khata.png)
+
+5. **Inbound Sourcing, Purchase Orders & A4 Goods Receipt:**
+   ![Procurement Sourcing](./assets/screenshots/05-procurement-sourcing.png)
+
+6. **Financial Accounting, Monthly P&L and Unit Economics:**
+   ![Financial Accounting](./assets/screenshots/06-financial-pl.png)
+
+7. **Store Operations, Cash Drawer & Quarantine:**
+   ![Store Operations](./assets/screenshots/07-operations-cash-drawer.png)
+
+8. **Decoupled Central Super Admin Portal:**
+   ![Super Admin Portal](./assets/screenshots/08-superadmin-dashboard.png)
+
 ## 5. Detailed mobile sale flow
 
 1. Header shows active store clearly.

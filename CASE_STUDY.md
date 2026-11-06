@@ -3,6 +3,8 @@
 ## Executive Summary
 **Krishi Sheba** is an agricultural retail management platform designed to solve operational, regulatory, and credit challenges faced by fertilizer, pesticide, and seed input dealers across rural Bangladesh.
 
+![Krishi Sheba Platform Dashboard](./docs/assets/screenshots/01-dashboard.png)
+
 ---
 
 ## 1. Problem Statement
@@ -22,6 +24,16 @@ Agricultural input retailers in Bangladesh operate in a high-stakes, tightly reg
 | **Damped Spring Mechanics (`useSpring`)** | Replaced jarring digital step counters with smooth harmonic oscillation, improving visual balance monitoring during peak counter rushes. |
 | **Catmull-Rom to Cubic Bezier Conversion** | Smoothly interpolates seasonal sales trends without unnatural polynomial overshoot. |
 | **Tiro Bangla Typography** | Provides authentic Bengali glyphs optimized for official print receipts and numerals. |
+
+### Visual Verification Gallery
+
+| Point of Sale & Regulatory Engine | Agrochemical Inventory & Quota Bounds |
+| :---: | :---: |
+| ![Point of Sale](./docs/assets/screenshots/02-pos-billing.png) | ![Inventory & Batches](./docs/assets/screenshots/03-inventory-stock.png) |
+| **Farmer Khata & Seasonal Harvest Cycles** | **Procurement & Goods Receipt Notes (GRN)** |
+| ![Farmer Seasonal Khata](./docs/assets/screenshots/04-farmer-khata.png) | ![Procurement Sourcing](./docs/assets/screenshots/05-procurement-sourcing.png) |
+| **Periodic Financial Accounting & P&L** | **Central Super Admin Command Center** |
+| ![Financial P&L](./docs/assets/screenshots/06-financial-pl.png) | ![Super Admin Portal](./docs/assets/screenshots/08-superadmin-dashboard.png) |
 
 ---
 

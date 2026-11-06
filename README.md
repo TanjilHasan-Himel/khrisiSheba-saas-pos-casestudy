@@ -172,15 +172,28 @@ CREATE POLICY "Tenant isolation for sales records"
 - **Toxicity Warning Engine**: Displays WHO hazard classification bands (RED, YELLOW, BLUE, GREEN). Formats mandatory Pre-Harvest Intervals (PHI in days), Restricted Entry Intervals (REI in hours), and emergency antidote instructions directly on the customer invoice.
 - **Seed Certification Verification**: Validates Seed Certification Agency (SCA) lot numbers, germination rate percentages (minimum 80% threshold), and moisture content prior to sale confirmation.
 
+![Point of Sale & Regulatory Cash Memo Engine](./docs/assets/screenshots/02-pos-billing.png)
+
+### Agrochemical Inventory & Regulatory Safety Profiles
+- **Subsidized Quota Guard**: Live quota consumption tracking for Urea, TSP, DAP, and MoP with maximum customer allotment controls.
+- **WHO Toxicity Profiles**: Direct enforcement of Class I Red and Class II Yellow hazard bands with mandatory protective equipment advisories.
+- **SCA Seed Batch Tracking**: Certified seed lot numbers, germination percentages, and expiration safeguards.
+
+![Agrochemical Inventory & Regulatory Profiles](./docs/assets/screenshots/03-inventory-stock.png)
+
 ### Farmer Khata Book & Seasonal Credit Cycles
 - **Boro / Aman / Aus / Rabi Credit Cohorts**: Structures farmer debts by crop harvest cycles rather than calendar months.
 - **Single-Click Localized SMS Reminders**: Generates compliant Bengali SMS templates including farmer name, current outstanding balance in BDT, and physical counter address.
 - **Krishok Card & NID Integration**: Stores official national identity markers for formal auditing.
 
+![Farmer Seasonal Khata Book](./docs/assets/screenshots/04-farmer-khata.png)
+
 ### Sourcing, Purchase Orders & A4 Goods Receipt
 - **Procurement Lifecycle**: Tracks Order Number, Supplier, Items, Ordered Quantity, Received Quantity, Shortage, Unit Cost, and Line Total.
 - **Goods Received Note (GRN)**: Supports partial shipment receipts (`PARTIALLY_RECEIVED`) and complete arrivals (`COMPLETED`), assigning lot codes and expiry dates to inventory batches.
 - **A4 Document Print Engine**: High-contrast, clean `@media print` layout formatting the purchase order and delivery receipt onto standard A4 paper with DAE trade license numbers, itemized tables, and dual authorization signature blocks.
+
+![Procurement, Sourcing & Goods Receipt Note](./docs/assets/screenshots/05-procurement-sourcing.png)
 
 ### Periodic Financial Accounting (P&L, ROI, CAC)
 - **Monthly Income Statement**: Breakdown of Revenue, Cost of Goods Sold (COGS), Gross Profit, Operating Expenses (rent, wages, electricity, transport), Net Profit, and Net Margin %.
@@ -188,16 +201,28 @@ CREATE POLICY "Tenant isolation for sales records"
 - **Crop Season ROI Matrix**: Capital deployed versus gross return and net profit across Boro (28.4% ROI), Aman (25.0% ROI), Rabi (28.0% ROI), and Aus (23.1% ROI).
 - **Farmer Unit Economics**: Sourcing CAC breakdown (৳185/farmer) versus Annual Lifetime Value (৳45,200/farmer).
 
+![Periodic Financial Accounting & P&L Statement](./docs/assets/screenshots/06-financial-pl.png)
+
+### Daily Operations, Cash Drawer & Quarantine Audits
+- **End-of-Day Cash Balancing**: Denomination-by-denomination cash drawer verification against system totals with variance logging.
+- **Regulatory Quarantine**: Segregation of expired agrochemicals and sub-standard seed germination batches (<80% SCA threshold) pending safe disposal.
+
+![Daily Operations & Cash Drawer Audits](./docs/assets/screenshots/07-operations-cash-drawer.png)
+
 ### Decoupled Central Super Admin Portal
 - Located at an isolated route (`/superadmin`) with a dedicated Master Security PIN gate (`7890`).
 - Central multi-tenant dashboard monitoring licensed dealerships across Bogura, Dinajpur, Rajshahi, and Cumilla.
 - Regulatory document verification queue for reviewing Trade Licenses, TIN Certificates, and DAE Dealership registrations.
 - **Explicit Store Impersonation**: Clicking "দোকানে প্রবেশ করুন" on any tenant cleanly navigates to the store dashboard with an explicit administrative notice banner and a 1-click return button.
 
+![Central Super Admin Command Center](./docs/assets/screenshots/08-superadmin-dashboard.png)
+
 ### Physics-Based Financial Telemetry
 - **Harmonic Spring Oscillator (`useSpring`)**: Smooth numerical transitions between time windows (`1H`, `4H`, `1D`, `1W`) using critically damped spring physics.
 - **Sub-Pixel Catmull-Rom Splines**: Evaluates cubic tangents across historical balance data points, preventing unnatural overshoot.
 - **Volume-Preserving Liquid Pull-to-Refresh (`useGooScale`)**: Simulates non-linear elastic fluid resistance with organic Web Audio API droplet synthesized sound feedback.
+
+![Dashboard Overview & Physics-Based Telemetry](./docs/assets/screenshots/01-dashboard.png)
 
 ---
 
